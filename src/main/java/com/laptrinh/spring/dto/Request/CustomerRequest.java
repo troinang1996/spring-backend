@@ -10,4 +10,11 @@ import lombok.NoArgsConstructor;
 public class CustomerRequest {
     private String username;
     private String password;
+    private String fullName;
+    private String email;
+    private String photo;
+    private Boolean activated ;
+
+
+    private Boolean admin ;
 }
