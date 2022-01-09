@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
+
 @Entity
 @Table(name = "Products")
 @Data
@@ -39,4 +41,8 @@ public class Product {
     private String description;
     @Column(name = "ViewCount")
     private Integer viewCount;
+    @OneToMany(mappedBy = "product", fetch = FetchType.LAZY)
+    List<OrderDetail> orderDetailList;
+
+
 }
